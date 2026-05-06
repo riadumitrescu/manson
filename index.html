@@ -198,15 +198,16 @@
       Two screens. Two redesigns.
     </h1>
     <p class="mt-5 text-[15px] text-ink-700 leading-[1.7]">
-      I spent about 30 minutes inside Mason before I drew anything, because I wanted to see what actually felt clumsy
-      in use, not just unpolished in screenshots. Two screens stood out: the Ask Mason home, where every new user forms
-      their first impression, and the Invoice Review output, where the citation feature actually pays off the marketing
-      promise. I redesigned those two, and noted five other things while I was in there.
+      I spent <span class="font-medium text-ink-900">30 minutes inside Mason</span> before I drew anything, because I wanted
+      to see what felt clumsy in use, not just unpolished in screenshots. Two screens stood out:
+      <span class="font-medium text-ink-900">the Ask Mason home</span> (every new user's first impression) and
+      <span class="font-medium text-ink-900">the Invoice Review output</span> (where the citation feature pays off the
+      marketing promise). I redesigned those two, plus flagged
+      <span class="font-medium text-ink-900">five other things</span> along the way.
     </p>
     <p class="mt-4 text-[13.5px] text-ink-500 leading-[1.7]">
-      One caveat: I matched Mason's look as best I could from the live product, but I don't know the exact fonts or
-      tokens the team uses, so some pieces probably look a little off. I'd align with the real design system before
-      shipping any of this.
+      <span class="font-medium text-ink-700">One caveat:</span> I matched Mason's look as best I could from the live
+      product, but I don't know the exact fonts or tokens the team uses, so some pieces probably look a little off.
     </p>
     <div class="mt-7 flex flex-wrap gap-2.5 text-[14px]">
       <a href="#findings" class="px-4 py-2 rounded-full bg-orange-50 hover:bg-orange-100 border border-orange-200/70 text-orange-800 font-medium inline-flex items-center gap-1.5 transition">Five findings <span aria-hidden="true">→</span></a>
@@ -240,8 +241,8 @@
       </div>
       <div class="md:col-span-8 text-[14px] text-ink-700 leading-[1.7]">
         <ul class="space-y-3">
-          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>Mason's marketing says "not just a chatbot," but the home is a centered chat box with "What can I help with today?". Same shape as every other LLM wrapper.</span></li>
-          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>A new user has about 30 seconds before they form an opinion. They see a chatbox, file Mason as another GPT wrapper, and never find the citation feature that's supposed to set it apart.</span></li>
+          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>Mason's marketing says <span class="font-medium text-ink-900">"not just a chatbot,"</span> but the home is a centered chat box. Same shape as every other LLM wrapper.</span></li>
+          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>A new user has <span class="font-medium text-ink-900">30 seconds</span> before forming an opinion. They see a chatbox, file Mason as another GPT wrapper, and never find the citation feature.</span></li>
           <li class="flex gap-3"><span class="text-ink-900 mt-2.5 w-1 h-1 rounded-full bg-ink-900 flex-shrink-0"></span><span><span class="font-medium text-ink-900">My fix.</span> Part 1 opens with a real workbook and one flagged row pulsing red, so verification is happening on screen before they type a word. Chat is still there, just demoted below the workbook.</span></li>
         </ul>
       </div>
@@ -255,8 +256,8 @@
       </div>
       <div class="md:col-span-8 text-[14px] text-ink-700 leading-[1.7]">
         <ul class="space-y-3">
-          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>Recent Activity has two rows named <span class="mono text-[13px]">Untitled chat</span>, and History has two more named <span class="mono text-[13px]">Untitled · Document Agent</span>. They're threads I opened but never typed in. Mason auto-names threads with content, but empty ones still get a permanent slot.</span></li>
-          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>Every time I want to find what I actually worked on, I scan past the abandoned starts. Small thing, but it undercuts the auditability story Mason is built around.</span></li>
+          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>Recent Activity has two rows named <span class="mono text-[13px]">Untitled chat</span>, History has two more named <span class="mono text-[13px]">Untitled · Document Agent</span>. They're threads I opened but never typed in. Mason auto-names threads <span class="font-medium text-ink-900">with content</span>, but empty ones still get a permanent slot.</span></li>
+          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>To find what I actually worked on, I scan past abandoned starts. Small thing, but it undercuts the <span class="font-medium text-ink-900">auditability story</span> Mason is built around.</span></li>
           <li class="flex gap-3"><span class="text-ink-900 mt-2.5 w-1 h-1 rounded-full bg-ink-900 flex-shrink-0"></span><span><span class="font-medium text-ink-900">My fix.</span> Hide empty threads from Recent, or tuck them in a collapsed "Drafts" group. Day 30 of my Part 1 redesign also promotes artifacts (workbooks, projects) above raw chat threads, since what I built is more useful to find than what I asked.</span></li>
         </ul>
       </div>
@@ -270,8 +271,8 @@
       </div>
       <div class="md:col-span-8 text-[14px] text-ink-700 leading-[1.7]">
         <ul class="space-y-3">
-          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>Three of the seven workflows in the sidebar are grayed out with orange <span class="chip bg-orange-50 text-orange-700 text-[10px]">REQUEST</span> pills, sitting right next to the active ones. They're in the user's eyeline every time.</span></li>
-          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>The day-one signal is "you don't have access to most of this," which is the opposite of onboarding. Either users notice and feel boxed out, or they don't notice at all and the locked items are dead weight.</span></li>
+          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">Three of seven workflows</span> are grayed out with orange <span class="chip bg-orange-50 text-orange-700 text-[10px]">REQUEST</span> pills, right next to the active ones. In the user's eyeline every time.</span></li>
+          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>Day-one signal is <span class="font-medium text-ink-900">"you don't have access to most of this,"</span> which is the opposite of onboarding. Either users notice and feel boxed out, or they don't notice and the locked items are dead weight.</span></li>
           <li class="flex gap-3"><span class="text-ink-900 mt-2.5 w-1 h-1 rounded-full bg-ink-900 flex-shrink-0"></span><span><span class="font-medium text-ink-900">My fix.</span> Keep active workflows in the agent card. Move locked ones behind a "Browse all workflows" link, so they're discoverable on intent but out of the default visual load.</span></li>
         </ul>
       </div>
@@ -285,8 +286,8 @@
       </div>
       <div class="md:col-span-8 text-[14px] text-ink-700 leading-[1.7]">
         <ul class="space-y-3">
-          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>The Files row has a small iOS-style toggle <span class="inline-flex items-center w-7 h-4 rounded-full bg-ink-200 p-0.5 align-middle"><span class="w-3 h-3 rounded-full bg-white shadow-sm"></span></span> with no label and no tooltip when I hovered. I genuinely couldn't tell what it does.</span></li>
-          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>Best guess: it controls whether all project files are loaded into the agent's context. The wrong setting means the agent quietly ignores docs you uploaded, so it's load-bearing, and hiding it in an unlabeled nav toggle is a rough spot.</span></li>
+          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>The Files row has a small iOS-style toggle <span class="inline-flex items-center w-7 h-4 rounded-full bg-ink-200 p-0.5 align-middle"><span class="w-3 h-3 rounded-full bg-white shadow-sm"></span></span> with <span class="font-medium text-ink-900">no label and no tooltip</span>. I genuinely couldn't tell what it does.</span></li>
+          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>Best guess: it controls whether all project files are loaded into the agent's context. The wrong setting means <span class="font-medium text-ink-900">the agent quietly ignores docs you uploaded</span>, so it's load-bearing, and hiding it in an unlabeled toggle is rough.</span></li>
           <li class="flex gap-3"><span class="text-ink-900 mt-2.5 w-1 h-1 rounded-full bg-ink-900 flex-shrink-0"></span><span><span class="font-medium text-ink-900">My fix.</span> Move it into the agent card with a real label like "Context: All project files / Selected files / None." State controls belong with the agent they affect, not the nav.</span></li>
         </ul>
       </div>
@@ -300,8 +301,8 @@
       </div>
       <div class="md:col-span-8 text-[14px] text-ink-700 leading-[1.7]">
         <ul class="space-y-3">
-          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>Ask Mason has a big central chat input. Smartsheets has a separate one docked in the right rail. Switching between them doesn't carry the conversation across.</span></li>
-          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>This splits the mental model: "where do I tell Mason to do something" depends on which screen I'm on. Ask for a workbook in Ask Mason, then open Smartsheets to view it, and the right-rail agent doesn't know about that thread.</span></li>
+          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>Ask Mason has a big central chat input. Smartsheets has a separate one in the right rail. <span class="font-medium text-ink-900">Switching between them doesn't carry the conversation across.</span></span></li>
+          <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span>This splits the mental model: "where do I tell Mason to do something" depends on which screen I'm on. Ask for a workbook in Ask Mason, then open Smartsheets to view it, and <span class="font-medium text-ink-900">the right-rail agent doesn't know about that thread</span>.</span></li>
           <li class="flex gap-3"><span class="text-ink-900 mt-2.5 w-1 h-1 rounded-full bg-ink-900 flex-shrink-0"></span><span><span class="font-medium text-ink-900">My fix.</span> One persistent chat that follows the user across screens. The right rail becomes inspector-only, the way it works in my Part 2 below. The agent stays the same; only the artifact changes.</span></li>
         </ul>
       </div>
@@ -898,9 +899,9 @@
     </div>
     <div class="md:col-span-8 text-[14px] text-ink-700 leading-[1.7]">
       <ul class="space-y-3">
-        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">No wizard, no tour.</span> The home leads with a live demo: one row of a real workbook pulses red, and clicking any row pops the citation. Users feel the citation feature before clicking a single CTA.</span></li>
-        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">Chrome fades as the user progresses.</span> First visit has a welcome line and progress dots. After the sample, those collapse into a Linear-style corner widget. By day 30 there's no chrome at all, just the workspace with real deals. Onboarding shouldn't be a mode you exit, just something that fades.</span></li>
-        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">The sidebar evolves too.</span> History goes from empty, to one sample thread, to three real ones. The progression isn't only in the hero, it's reinforced by the chrome filling in as the user does work.</span></li>
+        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">No wizard, no tour.</span> The home leads with a live demo. One row pulses red, click it, citation pops. Users feel the feature before clicking a single CTA.</span></li>
+        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">Chrome fades as you progress.</span> Welcome line on day 1. Corner widget after the sample. Nothing at all by day 30. Onboarding fades, doesn't exit.</span></li>
+        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">Sidebar evolves too.</span> History goes from empty, to one sample thread, to three real ones. The progression isn't only in the hero.</span></li>
       </ul>
     </div>
   </div>
@@ -967,7 +968,7 @@
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">AFTER</dt>
             <dd>A live workbook with one flagged row pulsing. Click any row to see the citation.</dd>
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">WHY</dt>
-            <dd>The citation feature is what sets Mason apart, and the marketing is built around it. It should be the first thing new users see, not something they dig for. A working demo in the hero means they get the differentiator on first impression, instead of forming a "just another chatbot" opinion that's hard to undo.</dd>
+            <dd>The citation feature is what sets Mason apart, and the marketing is built around it. It should be <span class="font-medium text-ink-900">the first thing new users see, not something they dig for</span>. A working demo in the hero means they get the differentiator on first impression.</dd>
           </dl>
         </div>
       </div>
@@ -985,7 +986,7 @@
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">AFTER</dt>
             <dd>One arrow style (the dropdown chevron on the agent picker). Locked workflows behind a "Browse all" link. The mystery toggle moved into the agent card with a real label.</dd>
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">WHY</dt>
-            <dd>The original had three arrow shapes (chevron-right, arrow-right, expand-chevron) doing different jobs in the same space, plus an unlabeled toggle on Files and grayed-out workflows advertising what the user couldn't access. The redesign uses one arrow style (the dropdown chevron on the agent picker) and moves the gating and mystery toggle out of the default view.</dd>
+            <dd>The original had <span class="font-medium text-ink-900">three arrow shapes</span> doing different jobs in the same space, plus an unlabeled toggle and grayed-out workflows advertising what the user couldn't access. The redesign uses <span class="font-medium text-ink-900">one arrow style</span> and moves the gating and mystery toggle out of the default view.</dd>
           </dl>
         </div>
       </div>
@@ -1026,7 +1027,7 @@
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">AFTER</dt>
             <dd>One clickable card. One chevron. Soft gray avatar. Context as an inline value. Workflows as a quiet list.</dd>
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">WHY</dt>
-            <dd>The original card had five competing bits: an AGENT label, a "switch" link, a heavy black avatar, a Context arrow, a WORKFLOWS label, and a "Browse" link with another arrow. The redesign turns the whole card into one clickable button with one chevron. The avatar lightens because it doesn't need to dominate, and the labels go away because a card laid out this way already says "this is the agent and these are its workflows."</dd>
+            <dd>The original card had <span class="font-medium text-ink-900">five competing bits</span> (AGENT label, "switch" link, heavy black avatar, Context arrow, WORKFLOWS label, "Browse" arrow). The redesign makes the whole card <span class="font-medium text-ink-900">one clickable button with one chevron</span>. The labels go away because the layout already says "this is the agent and these are its workflows."</dd>
           </dl>
         </div>
       </div>
@@ -1062,7 +1063,7 @@
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">AFTER</dt>
             <dd>Real threads only. Empty drafts hidden, or tucked into a collapsed "Drafts" group.</dd>
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">WHY</dt>
-            <dd>Recent should be a record of work I actually did, because that's what I'm coming back to find. Empty drafts mixed in make the list noisier without adding anything. Filter them out or tuck them in a collapsed group, and the user's eye lands on real work first.</dd>
+            <dd>Recent should be <span class="font-medium text-ink-900">a record of work I actually did</span>. Empty drafts mixed in make the list noisier without adding anything. Filter them or collapse them, and the user's eye lands on real work first.</dd>
           </dl>
         </div>
       </div>
@@ -1082,7 +1083,7 @@
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">V3</dt>
             <dd>Day 30. No chrome at all. Active deals lead the page.</dd>
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">WHY</dt>
-            <dd>The trap with onboarding is designing it as a separate mode the user has to exit, which forces a hard cutoff between "new" and "real" users and a decision about when to flip the switch. Making the home itself the onboarding, with chrome that fades as the user does work, removes the cutoff. The same screen just reads as more or less helpful depending on where they are.</dd>
+            <dd>The trap with onboarding is designing it as <span class="font-medium text-ink-900">a separate mode the user has to exit</span>, which forces a hard cutoff between "new" and "real" users. Making the home itself the onboarding, with chrome that fades as the user does work, removes the cutoff entirely.</dd>
           </dl>
         </div>
       </div>
@@ -1498,10 +1499,10 @@
     </div>
     <div class="md:col-span-8 text-[14px] text-ink-700 leading-[1.7]">
       <ul class="space-y-3">
-        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">The inspector stays open.</span> The right panel is a stable three-stack: summary on top, citation in the middle, source PDF underneath. Clicking a different cell scrolls the panels instead of swapping them. No "Back to Chat" mode switch, no losing your place between cells.</span></li>
-        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">Status next to the title.</span> Verified, partial, and discrepancy counts plus a tri-color bar live right next to the workbook title. That's the first thing an analyst wants to skim: how much is good, how much do I have to look at.</span></li>
-        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">Toolbar from 22 controls to 6.</span> Workflow output is read-only and the user is inspecting, not authoring fonts. The full Excel toolbar belongs in standalone Smartsheets. What's left is the actions analysts actually use.</span></li>
-        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">Arrow keys + "Disagree."</span> Once an analyst trusts the citations, they want to approve at speed. Arrow keys step through cells, Enter opens the source. And when Mason gets a citation wrong, "Disagree" is a one-click way to push back instead of living with it.</span></li>
+        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">The inspector stays open.</span> Stable three-stack on the right: summary, citation, source PDF. Click a cell, panels scroll. No "Back to Chat" mode switch.</span></li>
+        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">Status next to the title.</span> Verified / partial / discrepancy counts plus a tri-color bar. The first thing an analyst skims: how much is good, how much to actually look at.</span></li>
+        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">Toolbar from 22 controls to 6.</span> Output is read-only. Users inspect, not author fonts. Full Excel toolbar belongs in standalone Smartsheets.</span></li>
+        <li class="flex gap-3"><span class="text-ink-300 mt-2.5 w-1 h-1 rounded-full bg-ink-300 flex-shrink-0"></span><span><span class="font-medium text-ink-900">Arrow keys + "Disagree."</span> Arrow keys step through cells, Enter opens the source. "Disagree" is one-click pushback when Mason gets a citation wrong.</span></li>
       </ul>
     </div>
   </div>
@@ -1537,7 +1538,7 @@
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">AFTER</dt>
             <dd>6 buttons. Undo, Redo, Format dropdown, Insert, Import, Download.</dd>
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">WHY</dt>
-            <dd>Workflow output is a read-only artifact for inspecting and verifying, not a blank spreadsheet to edit. Most of the original 22 buttons (font, size, bold, italic, fill, borders, format painter, lock cell) do nothing useful here, just a wall of icons to scan past. Stripping it down makes the workbook feel like the document it actually is.</dd>
+            <dd>Workflow output is <span class="font-medium text-ink-900">a read-only artifact for inspecting</span>, not a blank spreadsheet to edit. Most of the 22 buttons (font, size, bold, fill, borders) do nothing useful here, just a wall of icons. Stripping it down makes the workbook feel like the document it actually is.</dd>
           </dl>
         </div>
       </div>
@@ -1569,7 +1570,7 @@
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">AFTER</dt>
             <dd>A tri-color progress bar with verified, partial, and discrepancy counts. Total dollars due. Right next to the workbook title.</dd>
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">WHY</dt>
-            <dd>When an analyst opens an invoice review, they want to know "how much is verified, how many partial, how many flagged." That's the first frame of the screen, and it should be readable in about a second. The progress bar plus three counts gives them the whole status in one glance, right where their eye lands first.</dd>
+            <dd>When an analyst opens an invoice review, they want to know <span class="font-medium text-ink-900">"how much is verified, how many flagged."</span> That's the first frame of the screen and should be readable in a second. The progress bar plus three counts gives them the whole status in one glance.</dd>
           </dl>
         </div>
       </div>
@@ -1587,7 +1588,7 @@
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">AFTER</dt>
             <dd>A stable three-stack on the right. Summary on top, citation in the middle, source PDF docked under it. Click a different cell, the panels scroll. Nothing replaces.</dd>
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">WHY</dt>
-            <dd>Inspecting a cell shouldn't be a mode you enter and exit, because the whole point is bouncing between cells quickly. The original inspector swapped out every time you clicked a cell, breaking your place every few seconds. A persistent panel that just updates as you click lets you stay in the inspecting flow without losing context, which matters across 42 line items.</dd>
+            <dd>Inspecting a cell <span class="font-medium text-ink-900">shouldn't be a mode you enter and exit</span>, because the whole point is bouncing between cells quickly. The original inspector swapped out every click, breaking your place every few seconds. A persistent panel that just updates as you click keeps you in the flow.</dd>
           </dl>
         </div>
       </div>
@@ -1625,7 +1626,7 @@
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">AFTER</dt>
             <dd>A small button on every citation card. One click captures the disagreement.</dd>
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">WHY</dt>
-            <dd>When Mason gets a citation wrong today, there's no way for the user to flag it. The user has no agency, and Mason gets no corrective signal. A one-click "Disagree" button on every citation card solves both: the user can push back without a support ticket, and the team gets training data from the people best positioned to label it.</dd>
+            <dd>When Mason gets a citation wrong today, there's <span class="font-medium text-ink-900">no way for the user to flag it</span>. No agency for the user, no corrective signal for Mason. A one-click "Disagree" button on every citation solves both: the user pushes back without a support ticket, and the team gets training data from the people best positioned to label it.</dd>
           </dl>
         </div>
       </div>
@@ -1654,7 +1655,7 @@
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">AFTER</dt>
             <dd>Arrow keys step through cited cells. Enter opens the source PDF.</dd>
             <dt class="text-[10px] mono tracking-wider text-ink-400 pt-1">WHY</dt>
-            <dd>Once an analyst trusts Mason's citations, they shift from "check each one carefully" to "scan and approve in a rhythm." That's the workflow that wins back time. Mousing to each yellow cell fights the rhythm. Arrow keys to step through and Enter to open the source lets them stay on the keyboard for the whole pass, which is the difference between Mason helping and being one more piece of software to drive.</dd>
+            <dd>Once an analyst trusts the citations, they shift from <span class="font-medium text-ink-900">"check each one carefully" to "scan and approve in a rhythm."</span> That's the workflow that wins back time. Mousing fights the rhythm. Arrow keys + Enter let them stay on the keyboard for the whole pass.</dd>
           </dl>
         </div>
       </div>
