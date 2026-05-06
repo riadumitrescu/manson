@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Mason redesign · Maria Dumitrescu</title>
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%230a0a0a" rx="7"/><text x="50%25" y="58%25" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="22" font-weight="500" fill="white">m</text></svg>' />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -1212,7 +1213,7 @@
             <button class="p-1.5 rounded hover:bg-ink-100 hidden lg:inline-flex" title="Undo"><svg class="ico"><use href="#i-undo"/></svg></button>
             <button class="p-1.5 rounded hover:bg-ink-100 hidden lg:inline-flex" title="Redo"><svg class="ico"><use href="#i-redo"/></svg></button>
             <span class="w-px h-4 bg-ink-200 mx-1 hidden lg:inline-block"></span>
-            <button class="px-2 py-1 rounded hover:bg-ink-100 text-[12px] flex items-center gap-1">Format <svg class="ico-sm"><use href="#i-chevron"/></svg></button>
+            <button class="px-2 py-1 rounded hover:bg-ink-100 text-[12px] flex items-center gap-1">Format <svg class="ico-sm text-ink-400" style="transform:rotate(90deg)"><use href="#i-chevron"/></svg></button>
             <button class="px-2.5 py-1 rounded-md bg-ink-950 text-white text-[12px] flex items-center gap-1.5">
               <svg class="ico-sm"><use href="#i-arrow-down"/></svg> Download
             </button>
@@ -1392,6 +1393,22 @@
                 <span>open source PDF</span>
               </div>
             </div>
+            <!-- Sheet tabs -->
+            <div class="border-t border-ink-200 bg-paper px-3 py-1.5 flex items-center gap-1 text-[12px] overflow-x-auto">
+              <button class="p-1 rounded hover:bg-ink-100 text-ink-500 flex-shrink-0" title="Add sheet"><svg class="ico-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+              <button class="p-1 rounded hover:bg-ink-100 text-ink-500 flex-shrink-0" title="All sheets"><svg class="ico-sm"><use href="#i-grid"/></svg></button>
+              <span class="w-px h-4 bg-ink-200 mx-1 flex-shrink-0"></span>
+              <button class="px-2.5 py-1 rounded-md bg-slate-800 text-white font-medium flex-shrink-0">Summary</button>
+              <button class="px-2.5 py-1 rounded-md bg-white border-b-2 border-orange-500 text-ink-900 font-medium flex-shrink-0">Line items</button>
+              <button class="px-2.5 py-1 rounded-md bg-blue-500 text-white font-medium flex-shrink-0">Sub-trades</button>
+              <button class="px-2.5 py-1 rounded-md bg-emerald-600 text-white font-medium flex-shrink-0">Backup PDFs</button>
+              <div class="ml-auto flex items-center gap-1 text-ink-500 flex-shrink-0">
+                <button class="p-1 rounded hover:bg-ink-100" title="Toggle gridlines"><svg class="ico-sm"><use href="#i-grid"/></svg></button>
+                <button class="p-1 rounded hover:bg-ink-100 text-[14px]">−</button>
+                <span class="text-[10.5px] mono text-ink-500 px-1">100%</span>
+                <button class="p-1 rounded hover:bg-ink-100 text-[14px]">+</button>
+              </div>
+            </div>
           </div>
 
           <!-- Inspector -->
@@ -1501,7 +1518,7 @@
             <button class="p-1.5 rounded hover:bg-ink-100" title="Undo"><svg class="ico"><use href="#i-undo"/></svg></button>
             <button class="p-1.5 rounded hover:bg-ink-100" title="Redo"><svg class="ico"><use href="#i-redo"/></svg></button>
             <span class="w-px h-4 bg-ink-200 mx-1"></span>
-            <button class="px-2 py-1 rounded hover:bg-ink-100 text-[12px] flex items-center gap-1">Format <svg class="ico-sm"><use href="#i-chevron"/></svg></button>
+            <button class="px-2 py-1 rounded hover:bg-ink-100 text-[12px] flex items-center gap-1">Format <svg class="ico-sm text-ink-400" style="transform:rotate(90deg)"><use href="#i-chevron"/></svg></button>
             <button class="px-2 py-1 rounded hover:bg-ink-100 text-[12px]">Insert</button>
             <button class="px-2 py-1 rounded hover:bg-ink-100 text-[12px]">Import</button>
             <button class="ml-auto px-2.5 py-1 rounded-md bg-ink-950 text-white text-[12px] flex items-center gap-1.5">
