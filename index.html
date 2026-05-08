@@ -66,18 +66,26 @@
     .hairline { border-top:1px solid #e8e8e6; }
 
     .citation-pop {
-      position:absolute; z-index:30; min-width:280px; max-width:320px;
-      background:#0a0a0a; color:#fff; padding:14px 14px 12px; border-radius:12px;
-      font-size:12.5px; line-height:1.5;
-      box-shadow:0 16px 50px -12px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.04);
+      position:absolute; z-index:30; min-width:280px; max-width:340px;
+      background:#fff; color:#171717; padding:12px 14px 11px; border-radius:12px;
+      font-size:12.5px; line-height:1.55;
+      border: 1px solid #e4e4e0;
+      box-shadow: 0 16px 36px -10px rgba(10,10,10,.18), 0 4px 10px -4px rgba(10,10,10,.08);
       transform: translate(-50%, calc(-100% - 14px));
       opacity:0; pointer-events:none; transition: opacity .18s ease, transform .18s ease;
     }
-    .citation-pop.open { opacity:1; pointer-events:auto; transform: translate(-50%, calc(-100% - 8px)); }
+    .citation-pop.open { opacity:1; pointer-events:auto; transform: translate(-50%, calc(-100% - 10px)); }
     .citation-pop::after {
-      content:""; position:absolute; left:50%; bottom:-6px; width:12px; height:12px;
-      background:#0a0a0a; transform:translateX(-50%) rotate(45deg);
+      content:""; position:absolute; left:50%; bottom:-6px; width:11px; height:11px;
+      background:#fff; border-right:1px solid #e4e4e0; border-bottom:1px solid #e4e4e0;
+      transform:translateX(-50%) rotate(45deg);
     }
+    .citation-pop .pop-close {
+      position:absolute; top:6px; right:6px; width:22px; height:22px;
+      display:flex; align-items:center; justify-content:center;
+      color:#a3a3a3; border-radius:6px; transition: color .15s, background .15s;
+    }
+    .citation-pop .pop-close:hover { color:#171717; background:#f3f3f0; }
 
     .pulse-cell { box-shadow: 0 0 0 0 rgba(234,88,12,.45); animation: pulseCell 2s ease-in-out infinite; }
     @keyframes pulseCell {
@@ -480,34 +488,35 @@
                   </tbody>
                 </table>
                 <div class="citation-pop" id="pop-hse" style="left:50%; top:54px;">
-                  <div class="text-[10px] mono tracking-wider text-orange-300 mb-1.5">CITATION · MATCHED</div>
-                  <div class="font-medium text-[13px] leading-tight">JBPA Direct Cost Summary · Block 45 · p. 3</div>
-                  <div class="text-ink-300 mt-1.5 text-[12px] italic">"Health and Safety Officer · $6,815.00 · 2/15/26"</div>
-                  <div class="mt-2.5 flex items-center justify-between text-[11px] text-ink-400">
-                    <span class="mono">match · 99%</span>
-                    <button class="underline">Open source →</button>
+                  <button class="pop-close" data-close-pop aria-label="Close"><svg class="ico-sm" style="width:11px;height:11px"><use href="#i-x"/></svg></button>
+                  <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 mono text-[10px] tracking-wider mb-2">MATCHED · 99%</span>
+                  <div class="font-medium text-[13px] leading-tight text-ink-900 pr-5">JBPA Direct Cost Summary · Block 45 · p. 3</div>
+                  <div class="mt-1.5 text-[12px] italic text-ink-500 leading-snug">"Health and Safety Officer · $6,815.00 · 2/15/26"</div>
+                  <div class="mt-3 pt-2.5 border-t border-ink-150 flex items-center justify-between text-[11px]">
+                    <span class="text-ink-500 mono">1 source</span>
+                    <button class="text-ink-700 hover:text-ink-900 underline" data-go-part2>Open source →</button>
                   </div>
                 </div>
                 <div class="citation-pop" id="pop-walkways" style="left:50%; top:88px;">
-                  <div class="text-[10px] mono tracking-wider text-orange-300 mb-1.5">CITATION · MATCHED</div>
-                  <div class="font-medium text-[13px] leading-tight">Northstar Scaffold INV-0169297 · p. 1</div>
-                  <div class="text-ink-300 mt-1.5 text-[12px] italic">"Covered walkways install · $75.00"</div>
-                  <div class="mt-2.5 flex items-center justify-between text-[11px] text-ink-400">
-                    <span class="mono">match · 100%</span>
-                    <button class="underline">Open source →</button>
+                  <button class="pop-close" data-close-pop aria-label="Close"><svg class="ico-sm" style="width:11px;height:11px"><use href="#i-x"/></svg></button>
+                  <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 mono text-[10px] tracking-wider mb-2">MATCHED · 100%</span>
+                  <div class="font-medium text-[13px] leading-tight text-ink-900 pr-5">Northstar Scaffold INV-0169297 · p. 1</div>
+                  <div class="mt-1.5 text-[12px] italic text-ink-500 leading-snug">"Covered walkways install · $75.00"</div>
+                  <div class="mt-3 pt-2.5 border-t border-ink-150 flex items-center justify-between text-[11px]">
+                    <span class="text-ink-500 mono">1 source</span>
+                    <button class="text-ink-700 hover:text-ink-900 underline" data-go-part2>Open source →</button>
                   </div>
                 </div>
                 <div class="citation-pop" id="pop-precast" style="left:50%; top:122px;">
-                  <div class="text-[10px] mono tracking-wider text-red-400 mb-1.5">FLAGGED · BACKUP SHORTFALL</div>
-                  <div class="font-medium text-[13px] leading-tight">Pre-cast Panels: material discrepancy</div>
-                  <div class="text-ink-300 mt-1.5 text-[12px] leading-relaxed">
-                    Claimed <span class="mono text-white">$740,927.65</span> but backup from
-                    Central Precast + Manray Glass totals <span class="mono text-white">$719,701.15</span>.
-                    <span class="text-red-300">$21,226.50 short.</span>
+                  <button class="pop-close" data-close-pop aria-label="Close"><svg class="ico-sm" style="width:11px;height:11px"><use href="#i-x"/></svg></button>
+                  <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-red-50 text-red-700 mono text-[10px] tracking-wider mb-2">FLAGGED · BACKUP SHORTFALL</span>
+                  <div class="font-medium text-[13px] leading-tight text-ink-900 pr-5">Pre-cast Panels: material discrepancy</div>
+                  <div class="mt-1.5 text-[12px] text-ink-700 leading-snug">
+                    Claimed <span class="mono text-ink-900">$740,927.65</span> but backup from Central Precast + Manray Glass totals <span class="mono text-ink-900">$719,701.15</span>. <span class="text-red-700 font-medium">$21,226.50 short.</span>
                   </div>
-                  <div class="mt-2.5 flex items-center justify-between text-[11px] text-ink-400">
-                    <span class="mono">2 sources</span>
-                    <button class="underline" data-go-part2>See evidence →</button>
+                  <div class="mt-3 pt-2.5 border-t border-ink-150 flex items-center justify-between text-[11px]">
+                    <span class="text-ink-500 mono">2 sources</span>
+                    <button class="text-ink-700 hover:text-ink-900 underline" data-go-part2>See evidence →</button>
                   </div>
                 </div>
               </div>
@@ -1789,6 +1798,21 @@
         pop.style.left = (rect.left - tableRect.left + rect.width/2) + 'px';
         pop.style.top = (rect.top - tableRect.top) + 'px';
         pop.classList.add('open');
+      }
+    });
+  });
+  // Close button inside each popover
+  document.querySelectorAll('[data-close-pop]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeAllPops();
+    });
+  });
+  // Don't close popover when clicking inside it (other than the close button)
+  document.querySelectorAll('.citation-pop').forEach(pop => {
+    pop.addEventListener('click', (e) => {
+      if (!e.target.closest('[data-close-pop]') && !e.target.closest('[data-go-part2]')) {
+        e.stopPropagation();
       }
     });
   });
